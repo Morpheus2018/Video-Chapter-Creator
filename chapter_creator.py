@@ -1,6 +1,12 @@
 import re
 import sys
 
+# Farb-Codes
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RESET = "\033[0m"
+
 def format_timecode(input_str):
     digits = re.sub(r'\D', '', input_str)
 
@@ -22,7 +28,7 @@ def main():
     try:
         filename_input = input("Dateiname zum Kapitel erstellen eingeben: ").strip()
         if filename_input.lower() == 'q':
-            print("Beendet durch Benutzereingabe.")
+            print(f"\n{YELLOW} Beendet durch Benutzereingabe q{RESET}")
             sys.exit(0)
         if not filename_input:
             filename_input = "Kapitel"
@@ -32,15 +38,15 @@ def main():
         with open(filepath, "w", encoding="utf-8"):
             pass
 
-        print("\n(Hinweis: Zum Beenden 'q' eingeben oder Strg+C drücken)")
-        print(f"(Datei {filepath} wurde erfolgreich erstellt !!!)\n")
+        print(f"\n{YELLOW} Hinweis: Zum Beenden 'q' eingeben oder Strg+C drücken{RESET}")
+        print(f" Datei {GREEN}{filepath}{RESET} wurde erfolgreich erstellt !!\n")
 
         chapter_counter = 1
 
         while True:
             user_input = input(f"Zeitstempel {chapter_counter} eingeben: ")
             if user_input.lower() == 'q':
-                print("Beendet durch Benutzereingabe.")
+                print(f"\n{YELLOW} Beendet durch Benutzereingabe q{RESET}")
                 break
 
             formatted = format_timecode(user_input)
@@ -51,7 +57,7 @@ def main():
 
                 name_input = input(f"Kapitel Name {chapter_counter} eingeben: ").strip()
                 if name_input.lower() == 'q':
-                    print("Beendet durch Benutzereingabe q.")
+                    print(f"\n{YELLOW} Beendet durch Benutzereingabe q{RESET}")
                     break
 
                 if not name_input:
@@ -65,14 +71,14 @@ def main():
 
                 chapter_counter += 1
             else:
-                print(f"Dein Zeitstempel: {user_input} war Falsch. Versuch nochmal !!")
+                print(f"⚠️  Dein Zeitstempel: {RED}{user_input}{RESET} ist Falsch. Versuch es nochmal !!")
 
     except KeyboardInterrupt:
-        print("\n\nProgramm durch Strg+C abgebrochen.")
+        print(f"\n\n{YELLOW} Beendet durch Benutzereingabe CTRL + C{RESET}")
 
     # Nur anzeigen, wenn filepath gesetzt wurde (Datei existiert)
     if filepath:
-        print(f"\nAlle zuvor erstellten Kapitel sind gespeichert in: {filepath}")
+        print(f" Alle zuvor erstellten Kapitel sind gespeichert in: {GREEN}{filepath}{RESET}\n")
 
 if __name__ == "__main__":
     main()
