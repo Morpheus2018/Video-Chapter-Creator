@@ -5,7 +5,7 @@ Verwendung zB. mit [MKVToolNix Chapters](https://mkvtoolnix.download/doc/mkvmerg
 ```
 python chapter_creator.py
 ```
-![chapter_preview.gif](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/chapter_preview.gif)
+![preview.gif](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/preview.gif)
 
 #### Output
 
