@@ -1,12 +1,11 @@
 # Video Chapter Creator
-Eine sehr einfache Python Program zum Erstellen von Kapiteldateien als TXT für Videos
+Ein einfaches Python Program zum Erstellen von Kapiteldateien als TXT für Videos.
+Verwendung zB. mit [MKVToolNix Chapters](https://mkvtoolnix.download/doc/mkvmerge.html#mkvmerge.chapters)
 
-#### Hotkeys
-
-- q
-  - Beenden durch Benutzereingabe.
-- CTRL + c
-  - Programm durch Strg+C abbrechen.
+```
+python chapter_creator.py
+```
+![chapter_preview.gif](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/chapter_preview.gif)
 
 #### Output
 
@@ -21,3 +20,10 @@ CHAPTER04=00:43:50.000
 CHAPTER04NAME=Ending
 ...
 ```
+
+#### Hotkeys
+
+- **q**
+  - Beenden durch Benutzereingabe q
+- **CTRL + C**
+  - Beenden durch Benutzereingabe CTRL + C
