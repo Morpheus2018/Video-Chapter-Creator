@@ -1,13 +1,23 @@
 # Video Chapter Creator
-Ein einfaches Python Program zum Erstellen von Kapiteldateien als TXT für Videos.
-Verwendung zB. mit [MKVToolNix Chapters](https://mkvtoolnix.download/doc/mkvmerge.html#mkvmerge.chapters)
+Ein einfaches Python Program zum Erstellen von Kapiteldateien als TXT, XML für Videos.
+Basieren auf [MKVToolNix Chapters](https://mkvtoolnix.download/doc/mkvmerge.html#mkvmerge.chapters) unterstützten Typen.
 
 ```
 python chapter_creator.py
 ```
-![preview.gif](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/preview.gif)
+![preview_new.gif](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/preview_new.gif)
 
-#### Output
+#### Output Types
+ - [TXT output example](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/test_chapters.txt)
+ - [XML output example](https://github.com/Morpheus2018/Video-Chapter-Creator/blob/main/test_chapters.xml)
+#### Hotkeys
+```
+    ┌───────────────────────────────────────────┐
+    │ 's' = Speichern | 'x' = Zurück / Löschen  │
+    │ 'l' = Liste     | 'q' = Beenden 'STRG + C'│
+    └───────────────────────────────────────────┘
+```
+#### Output TXT
 
 ```
 CHAPTER01=00:05:24.000
@@ -20,10 +30,3 @@ CHAPTER04=00:43:50.000
 CHAPTER04NAME=Ending
 ...
 ```
-
-#### Hotkeys
-
-- **q**
-  - Beenden durch Benutzereingabe q
-- **CTRL + C**
-  - Beenden durch Benutzereingabe CTRL + C
